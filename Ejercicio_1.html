@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<div style="background-color : blue; width:100%;height:1024px;">
+	
+	<div id="banner" style="background-color : red; width:100%;height:200px";>
+		<img src="Imagenes/Banner_Web.png" width="100%" height="100%">
+	</div>
+
+	<div id="formulario" style="background-color : #268173; width:100%;height:200px;">
+		
+		<div style="background-color: #FFF9C6; width:60%; height:130px; margin:4px auto; text-align:center" > 
+			<p> <hr> <hr> Por Favor Digite su Edad : <hr> <input type="text" id="edad"></p>
+			<input type="button" id="mostrar" value="Aceptar" onclick="calcular()">		
+
+		</div>
+	</div>
+
+		
+	<div id="Resultados" style="background-color : #C5AF05; width:100%;height:650px; text-align:center; font-size:30px; color: #FBF9EA; font-family:Impact">
+		<iframe name="marco" width="100%" height="650px" scrolling="auto" frameborder="0"></iframe>
+	</div>
+	
+
+</div>
+
+<script type="text/javascript">
+function calcular()
+{
+
+	var edad = parseFloat(document.getElementById('edad').value);
+ 		
+	if(edad >=18)
+	{
+		
+		if(edad % 2 == 0 )
+		{
+			document.getElementById('Resultados').innerHTML = " <br> Usted es Mayor de Edad; tiene " + edad + " Años de Edad, la cual Corresponde a un Numero Par ";
+		}
+		else
+		{
+			document.getElementById('Resultados').innerHTML = "<br> Usted es Mayor de Edad; tiene " + edad + " Años de Edad, la cual Corresponde a un Numero Impar";
+		}
+		
+	}
+	else
+	{
+		document.getElementById('Resultados').innerHTML = " <br> Usted es Menor de Edad; tiene " + edad + " Años de edad"
+	}
+	
+
+}
+	
+	
+
+</script>
+
+</body>
+</html>
